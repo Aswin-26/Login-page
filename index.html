@@ -14,6 +14,8 @@
             height: 100vh;
             margin: 0;
             overflow: hidden; /* Prevents scrolling */
+            text-shadow: 2px 2px 4px #000000; /* Text shadow applied to all text elements */
+            background: linear-gradient(to right,rgb(162, 0, 255),rgb(230, 14, 14));
         }
 
         video#myVideo {
@@ -27,15 +29,20 @@
             z-index: -1;
         }
 
-        .heading {
+        .content {
             position: relative;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
             text-align: center;
             z-index: 1; /* Ensures it appears above the video */
-            color: aqua;
-            text-shadow: #000000;
         }
 
-        a button {
+        .heading {
+            color: aqua;
+        }
+
+        a button, .application-link {
             padding: 10px 20px;
             margin: 10px;
             font-size: 16px;
@@ -48,7 +55,7 @@
             z-index: 1; /* Ensures it appears above the video */
         }
 
-        a button:hover {
+        a button:hover, .application-link:hover {
             background-color: #0056b3;
         }
 
@@ -57,17 +64,7 @@
         }
 
         .application-link {
-            padding: 10px 20px;
-            margin: 10px;
-            font-size: 16px;
-            color: white;
             background-color: #28a745;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            display: inline-block;
-            z-index: 1; /* Ensures it appears above the video */
         }
 
         .application-link:hover {
@@ -77,11 +74,13 @@
 </head>
 <body>
     <video autoplay muted loop id="myVideo">
-        <source src="https://github.com/Aswin-26/Login-page/blob/main/videos/animated-bg.mp4" type="video/mp4">
+        <source src="/videos/animated-bg.mp4" type="video/mp4">
     </video>
-    <h1 class="heading">Main Page</h1>
-    <a href="./login.html"><button>Login Form</button></a>
-    <a href="./registration.html"><button>Registration Form</button></a>
-    <a href="./application.html" class="application-link">Application Form</a>
+    <div class="content">
+        <h1 class="heading">Main Page</h1>
+        <a href="./login.html"><button>Login Form</button></a>
+        <a href="./registration.html"><button>Registration Form</button></a>
+        <a href="./application.html" class="application-link">Application Form</a>
+    </div>
 </body>
 </html>
