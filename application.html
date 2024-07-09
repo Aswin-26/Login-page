@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            overflow-x: hidden;
+        }
+
+        video#myVideo {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .application-container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            z-index: 1;
+            max-width: 500px;
+            margin: 40px auto;
+        }
+
+        .application-container h1 {
+            margin-bottom: 20px;
+        }
+
+        .application-container label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .application-container input, .application-container select, .application-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .application-container input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .application-container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .main-page-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            z-index: 1;
+        }
+
+        .main-page-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <video autoplay muted loop id="myVideo">
+        <source src="/videos/animated-bg-application.mp4" type="video/mp4">
+    </video>
+
+    <a href="./index.html" class="main-page-button">Main Page</a>
+
+    <div class="application-container">
+        <h1>Application Form</h1>
+        <form>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" required>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required>
+
+            <label for="zip">Zip Code:</label>
+            <input type="text" id="zip" name="zip" required>
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required>
+
+            <input type="submit" value="Submit Application">
+        </form>
+    </div>
+
+</body>
+</html>
